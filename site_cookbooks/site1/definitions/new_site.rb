@@ -25,6 +25,6 @@ define :new_site do
   end
 
   a2endissite "#{params[:name]}.conf" do
-    enable params[:enable_site]
+    enable_site params[:enable_site]
   end
 end

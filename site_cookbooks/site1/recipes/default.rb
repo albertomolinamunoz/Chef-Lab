@@ -6,12 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
-
 new_site "site1" do
         docroot "/var/www/site1"
         template "site1.conf.erb"
-	enable_site node['site1']['enable_site']
+	enable_site node[:site1][:enable_site]
         server_name node[:fqdn]
         server_aliases [node[:hostname],"site1"]
 end
